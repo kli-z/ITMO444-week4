@@ -41,7 +41,7 @@ echo "Deleting load balancer..."
 aws elb delete-load-balancer --load-balancer-name $lbn &
 wait
 echo "Terminating instances..."
-aws ec2 termiante-instances --instance-ids $inst1 $inst2 $inst3 &
+aws ec2 terminate-instances --instance-ids $inst1 $inst2 $inst3 &
 wait
 
 
