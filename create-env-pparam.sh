@@ -4,6 +4,14 @@
 
 # New version of create-env for Positional Parameters assignment.
 
+# Check number of params.
+want=5
+if [ $# -ne $want ];
+then
+  echo -e "You must specify $want parameters! You provided $#.\nExiting..."
+  exit 1 # abnormal termination
+fi
+
 grpname="" # sec group name
 keyname="" # key name
 amimage="" # image ID
